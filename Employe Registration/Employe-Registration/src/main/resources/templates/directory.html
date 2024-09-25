@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DIRECTORY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <h3>Employee Directory</h3>
+    <hr>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Date Of Birth</th>
+            <th>Address</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Postal Code</th>
+        </tr>
+            </thead>
+        <tbody>
+        <tr th:each="tempEmployee:${employees}">
+            <td th:text="${tempEmployee.Id}"/>
+            <td th:text="${tempEmployee.firstName}"/>
+            <td th:text="${tempEmployee.lastName}"/>
+            <td th:text="${tempEmployee.email}"/>
+            <td th:text="${tempEmployee.phone}"/>
+            <td th:text="${tempEmployee.date}"/>
+            <td th:text="${tempEmployee.streetAddress}"/>
+            <td th:text="${tempEmployee.country}"/>
+            <td th:text="${tempEmployee.state}"/>
+            <td th:text="${tempEmployee.city}"/>
+            <td th:text="${tempEmployee.postalCode}"/>
+        </tr>
+        </tbody>
+        <hr>
+    </table>
+   <hr>
+    <h4>Delete Employee by ID</h4>
+    <form action="#" th:action="@{/delete}" method="get">
+        <div class="input-group mb-3">
+            <input type="text" name="employeeId" class="form-control" placeholder="Enter Employee ID" required>
+            <button class="btn btn-danger" type="submit">Delete</button>
+        </div>
+    </form>
+    <hr>
+
+    <hr>
+    <h4>Update Employee by ID</h4>
+    <form action="#" th:action="@{/update}" method="post">
+        <div class="input-group mb-3">
+            <input type="text" name="employeeId" class="form-control" placeholder="Enter Employee ID" required>
+            <button class="btn btn-danger" type="submit">Update</button>
+        </div>
+    </form>
+    <hr>
+    <a th:href="@{/}">Back To Home</a>
+</div>
+</body>
+</html>
