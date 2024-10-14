@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>HOME</title>
+    <style>    
+        nav {
+            background-color: black;
+            text-align: center; 
+            padding: 10px 0; 
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline; 
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none; 
+        }
+	nav ul li a:hover{
+		color:red;
+	}
+	 .paragraph-box {
+            border: 2px solid #ccc; 
+            padding: 20px; 
+            margin: 20px; 
+            background-color: 
+            border-radius: 8px;
+        }
+	  p {
+            font-size: 16px; 
+            line-height: 1.6; 
+            margin: 20px; 
+            text-align: justify; 
+        }
+    </style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#" target="_blank">HOME</a></li>
+			<li><a th:href="@{/showFormForAdd}" target="_blank">REGISTRATION</a></li>
+			<li><a th:href="@{/list}" target="_blank">DIRECTORY</a></li>
+		</ul>
+	</nav>
+	<div>
+		<image src="https://www.teamly.com/blog/wp-content/uploads/2023/04/The-Good-the-Bad-and-the-Contingent-Advantages-and-			Disadvantages-of-Contingent-Workers.png"></image>
+		<image src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202301/technology-in-the-workplace-				sixteen_nine.png?size=948:533" width="664px"></image>
+	</div><br>
+	
+	<b>Welcome to the Employee Portal!
+	We’re excited to have you here! This portal is your one-stop destination for all the resources and information you need to thrive 	in our organization. From company announcements to benefits information and training resources, everything is at your 	fingertips.<br>Explore the portal to stay connected with your team, access important documents, and discover new opportunities for 	growth. Your contributions are what make our workplace special, and we’re here to support you every step of the way.<br></b>
+	<h3 align="center"><q>The only way to do great work is to love what you do</q></h3><br>
+	<h3 align="center"><q>Wake up with determination. Go to bed with satisfaction</q></h3>
+</body>
+</html>
